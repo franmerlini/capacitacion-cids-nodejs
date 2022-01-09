@@ -9,14 +9,10 @@ const app = Express();
 const cors = require("cors");
 const { checkSchema, validationResult } = require("express-validator");
 
-// app.get("/", (req, res) => {
-//      res.send("Hola mundo cruel");
-// });
-
 app.use(
      cors({
           credentials: true,
-          origin: "https://capacitacion-cids-nodejs.vercel.app",
+          origin: "https://capacitacion-cids-angular.vercel.app",
           optionsSuccessStatus: 200,
      })
 );
@@ -29,6 +25,7 @@ AppRoutes.forEach((route) => {
           checkSchema(route.schema),
           (req: Request, res: Response, next: Function) => {
                const errors = validationResult(req);
+
                if (!errors.isEmpty()) {
                     return res.json(validationResult(req).array());
                }
