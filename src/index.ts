@@ -16,7 +16,7 @@ const { checkSchema, validationResult } = require("express-validator");
 app.use(
      cors({
           credentials: true,
-          origin: "https://capacitacion-cids-nodejs.vercel.app/",
+          origin: "https://capacitacion-cids-nodejs.vercel.app",
           optionsSuccessStatus: 200,
      })
 );
