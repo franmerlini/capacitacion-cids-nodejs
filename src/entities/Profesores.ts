@@ -5,6 +5,7 @@ import {
      JoinColumn,
      ManyToOne,
      OneToMany,
+     PrimaryGeneratedColumn,
 } from "typeorm";
 import { Cargos } from "./Cargos";
 import { Personas } from "./Personas";
@@ -14,7 +15,7 @@ import { Puntajes } from "./Puntajes";
 @Index("fk_profesor_cargo_idx", ["idCargo"], {})
 @Entity("profesores", { schema: "capacitacion" })
 export class Profesores {
-     @Column("int", { primary: true, name: "id_profesor" })
+     @PrimaryGeneratedColumn({ type: "int", name: "id_profesor" })
      idProfesor: number;
 
      @Column("int", { name: "id_cargo", nullable: true })
