@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import container from "../services/inversify.config";
 import { AlumnosService } from "../services/AlumnosService";
-import Types from "../services/types/Types";
+import Types from "../services/types/types";
 import { ERROR } from "../../HttpErrorCodes";
 import { Alumnos } from "../entities/Alumnos";
 
