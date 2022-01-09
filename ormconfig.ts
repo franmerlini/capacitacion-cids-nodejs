@@ -9,8 +9,8 @@ const config: ConnectionOptions = {
      database: process.env.TYPEORM_DATABASE,
 
      entities: [
-          __dirname + "dist/src/entities/*.js",
-          __dirname + "src/entities/*.ts",
+          __dirname + "/dist/src/entities/*.js",
+          __dirname + "/src/entities/*.ts",
      ],
 
      synchronize: process.env.TYPEORM_SYNCHRONIZE
