@@ -9,6 +9,10 @@ const app = Express();
 const cors = require("cors");
 const { checkSchema, validationResult } = require("express-validator");
 
+app.get("/", (req, res) => {
+     res.send("Hola mundo cruel");
+});
+
 app.use(
      cors({
           credentials: true,
