@@ -7,7 +7,7 @@
           "allowJs": true,
           "esModuleInterop": true,
           "target": "es5",
-          "lib": ["es6"],
+          "lib": ["es6", "ES2018"],
           "sourceMap": true,
           "emitDecoratorMetadata": true,
           "experimentalDecorators": true,
