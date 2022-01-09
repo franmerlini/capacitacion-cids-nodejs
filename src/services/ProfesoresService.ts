@@ -1,7 +1,7 @@
 import { injectable } from "inversify";
 import { Profesores } from "../entities/Profesores";
 import { IProfesoresService } from "./interface/IProfesoresService";
-import { getConnection, getManager, Tree } from "typeorm";
+import { getConnection, getManager } from "typeorm";
 import { Personas } from "../entities/Personas";
 
 @injectable()
