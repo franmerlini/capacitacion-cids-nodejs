@@ -9,14 +9,14 @@ const app = Express();
 const cors = require("cors");
 const { checkSchema, validationResult } = require("express-validator");
 
-app.get("/", (req, res) => {
-     res.send("Hola mundo cruel");
-});
+// app.get("/", (req, res) => {
+//      res.send("Hola mundo cruel");
+// });
 
 app.use(
      cors({
           credentials: true,
-          origin: "http://localhost:4200",
+          origin: "https://capacitacion-cids-nodejs.vercel.app/",
           optionsSuccessStatus: 200,
      })
 );
