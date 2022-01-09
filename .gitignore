@@ -5,6 +5,6 @@ build/
 tmp/
 temp/
 dist/
-ormconfig.env
+env
 .vercel
-.env
+
