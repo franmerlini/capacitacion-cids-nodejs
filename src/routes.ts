@@ -8,6 +8,12 @@ import { Schema } from "./middlewares/ValidationSchema";
 
 export const AppRoutes = [
      {
+          path: "/",
+          method: "get",
+          action: TemasController.obtenerTemasConQB,
+          schema: Schema.obtenerTemasConGR,
+     },
+     {
           path: "/obtenerTemasConGR",
           method: "get",
           action: TemasController.obtenerTemasConQB,
