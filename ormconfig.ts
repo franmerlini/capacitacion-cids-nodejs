@@ -8,7 +8,7 @@ const config: ConnectionOptions = {
      password: process.env.TYPEORM_PASSWORD,
      database: process.env.TYPEORM_DATABASE,
 
-     entities: ["dist/src/entities/**/*.js,src/entities/**/*.ts"],
+     entities: [__dirname + "/**/entities/*{.ts,.js}"],
 
      synchronize: process.env.TYPEORM_SYNCHRONIZE
           ? process.env.TYPEORM_SYNCHRONIZE.toLowerCase() === "true"
