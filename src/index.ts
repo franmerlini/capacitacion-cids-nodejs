@@ -9,24 +9,13 @@ const app = Express();
 const cors = require("cors");
 const { checkSchema, validationResult } = require("express-validator");
 
-var whitelist = [process.env.CORS_ORIGIN, process.env.CORS_ORIGIN2];
-var corsOptions = {
-     origin: function (origin, callback) {
-          if (whitelist.indexOf(origin) !== -1) {
-               callback(null, true);
-          } else {
-               callback(new Error("Not allowed by CORS"));
-          }
-     },
-};
-
-// app.use(
-//      cors({
-//           credentials: true,
-//           origin: "*",
-//           optionsSuccessStatus: 200,
-//      })
-// );
+app.use(
+     cors({
+          credentials: true,
+          origin: [process.env.CORS_ORIGIN, process.env.CORS_ORIGIN2],
+          optionsSuccessStatus: 200,
+     })
+);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -34,7 +23,6 @@ AppRoutes.forEach((route) => {
      app.use(
           route.path,
           checkSchema(route.schema),
-          cors(corsOptions),
           (req: Request, res: Response, next: Function) => {
                const errors = validationResult(req);
 
