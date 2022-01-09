@@ -1,5 +1,5 @@
 import { Container } from "inversify";
-import Types from "./types/Types";
+import Types from "./types/types";
 import { ITemasService } from "./interface/ITemasService";
 import { TemasService } from "./TemasService";
 import { IAlumnosService } from "./interface/IAlumnosService";
