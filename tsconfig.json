@@ -6,12 +6,19 @@
           "noImplicitAny": false,
           "allowJs": true,
           "esModuleInterop": true,
-          "target": "es5",
+          "target": "es6",
           "lib": ["es6", "ES2018"],
           "sourceMap": true,
           "emitDecoratorMetadata": true,
           "experimentalDecorators": true,
           "typeRoots": ["./node_modules/@types", "./typings"],
-          "downlevelIteration": true
-     }
+          "downlevelIteration": true,
+          "moduleResolution": "node",
+          "resolveJsonModule": true,
+          "baseUrl": ".",
+          "paths": {
+               "*": ["node_modules/*"]
+          }
+     },
+     "include": ["src/**/*"]
 }
