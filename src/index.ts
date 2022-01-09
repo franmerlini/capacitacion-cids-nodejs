@@ -6,16 +6,16 @@ import { AppRoutes } from "./routes";
 import { connectDB } from "./database";
 
 const app = Express();
-const cors = require("cors");
+// const cors = require("cors");
 const { checkSchema, validationResult } = require("express-validator");
 
-app.use(
-     cors({
-          credentials: true,
-          origin: "*",
-          optionsSuccessStatus: 200,
-     })
-);
+// app.use(
+//      cors({
+//           credentials: true,
+//           origin: "*",
+//           optionsSuccessStatus: 200,
+//      })
+// );
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
