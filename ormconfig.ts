@@ -10,8 +10,8 @@ const config: ConnectionOptions = {
      database: process.env.TYPEORM_DATABASE,
 
      entities: [
-          path.join(__dirname, "..", "entities", "**", "*.*"),
-          path.join(__dirname, "..", "entities", "*.*"),
+          path.join(__dirname, "src", "entities", "**", "*.*"),
+          path.join(__dirname, "dist", "src", "entities", "**", "*.*"),
      ],
 
      synchronize: process.env.TYPEORM_SYNCHRONIZE
