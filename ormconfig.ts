@@ -9,10 +9,7 @@ const config: ConnectionOptions = {
      password: process.env.TYPEORM_PASSWORD,
      database: process.env.TYPEORM_DATABASE,
 
-     entities: [
-          path.join(__dirname, "src", "entities", "**", "*.*"),
-          path.join(__dirname, "dist", "src", "entities", "**", "*.*"),
-     ],
+     entities: ["dist/src/entities/**/*.js", "src/entities/**/*.ts"],
 
      synchronize: process.env.TYPEORM_SYNCHRONIZE
           ? process.env.TYPEORM_SYNCHRONIZE.toLowerCase() === "true"
