@@ -1,3 +1,4 @@
+import path from "path";
 import { ConnectionOptions } from "typeorm";
 
 const config: ConnectionOptions = {
@@ -8,7 +9,10 @@ const config: ConnectionOptions = {
      password: process.env.TYPEORM_PASSWORD,
      database: process.env.TYPEORM_DATABASE,
 
-     entities: [__dirname + "/**/entities/*{.ts,.js}"],
+     entities: [
+          path.join(__dirname, "..", "entities", "**", "*.*"),
+          path.join(__dirname, "..", "entities", "*.*"),
+     ],
 
      synchronize: process.env.TYPEORM_SYNCHRONIZE
           ? process.env.TYPEORM_SYNCHRONIZE.toLowerCase() === "true"
