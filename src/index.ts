@@ -12,7 +12,7 @@ const { checkSchema, validationResult } = require("express-validator");
 app.use(
      cors({
           credentials: true,
-          origin: process.env.CORS_ORIGIN,
+          origin: process.env.CORS_ORIGIN || process.env.CORS_ORIGIN2,
           optionsSuccessStatus: 200,
      })
 );
