@@ -1,10 +1,10 @@
-import { AlumnosController } from "./src/controllers/AlumnosController";
-import { CargosController } from "./src/controllers/CargosController";
-import { ProfesoresController } from "./src/controllers/ProfesoresController";
-import { PuntajesController } from "./src/controllers/PuntajesController";
-import { ReparticionesController } from "./src/controllers/ReparticionesController";
-import { TemasController } from "./src/controllers/TemasController";
-import { Schema } from "./src/middlewares/ValidationSchema";
+import { AlumnosController } from "./controllers/AlumnosController";
+import { CargosController } from "./controllers/CargosController";
+import { ProfesoresController } from "./controllers/ProfesoresController";
+import { PuntajesController } from "./controllers/PuntajesController";
+import { ReparticionesController } from "./controllers/ReparticionesController";
+import { TemasController } from "./controllers/TemasController";
+import { Schema } from "./middlewares/ValidationSchema";
 
 export const AppRoutes = [
      {

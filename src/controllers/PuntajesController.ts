@@ -2,7 +2,7 @@ import { Request, Response } from "express";
 import container from "../services/inversify.config";
 import { PuntajesService } from "../services/PuntajesService";
 import Types from "../services/types/types";
-import { ERROR } from "../../HttpErrorCodes";
+import { ERROR } from "../HttpErrorCodes";
 import { body } from "express-validator";
 
 let _puntajesService = container.get<PuntajesService>(Types.Puntaje);

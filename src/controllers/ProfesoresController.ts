@@ -2,7 +2,7 @@ import { ProfesoresService } from "../services/ProfesoresService";
 import { Request, Response } from "express";
 import container from "../services/inversify.config";
 import Types from "../services/types/types";
-import { ERROR } from "../../HttpErrorCodes";
+import { ERROR } from "../HttpErrorCodes";
 import { Profesores } from "../entities/Profesores";
 
 let _profesoresService = container.get<ProfesoresService>(Types.Profesor);

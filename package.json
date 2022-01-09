@@ -2,7 +2,7 @@
      "name": "miapp",
      "version": "1.0.0",
      "description": "",
-     "main": "server.ts",
+     "main": "src/server.ts",
      "scripts": {
           "start": "npx tsc -w",
           "dev": "npx nodemon",

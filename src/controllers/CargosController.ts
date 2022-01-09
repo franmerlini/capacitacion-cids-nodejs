@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import container from "../services/inversify.config";
 import Types from "../services/types/types";
-import { ERROR } from "../../HttpErrorCodes";
+import { ERROR } from "../HttpErrorCodes";
 import { CargosService } from "../services/CargosService";
 
 let _cargosService = container.get<CargosService>(Types.Cargo);
