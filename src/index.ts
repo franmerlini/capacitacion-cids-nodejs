@@ -9,13 +9,14 @@ const app = Express();
 const cors = require("cors");
 const { checkSchema, validationResult } = require("express-validator");
 
-app.use(
-     cors({
+app.use(cors());
+/*
+     {
           credentials: true,
           origin: process.env.CORS_ORIGIN,
           optionsSuccessStatus: 200,
-     })
-);
+     }
+*/
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
